@@ -83,6 +83,7 @@ set(game_features_header
 	../include/uibase/game_features/bsainvalidation.h
 	../include/uibase/game_features/dataarchives.h
 	../include/uibase/game_features/game_feature.h
+	../include/uibase/game_features/gamearchivehandler.h
 	../include/uibase/game_features/gameplugins.h
 	../include/uibase/game_features/igamefeatures.h
 	../include/uibase/game_features/localsavegames.h
