@@ -26,11 +26,6 @@ public:
   using ProgressCallback = std::function<void(qint64 current, qint64 total)>;
 
   /**
-   * @brief File dialog name filters for archives this handler can process.
-   */
-  virtual QStringList supportedArchiveNameFilters() const { return {}; }
-
-  /**
    * @brief Check whether this handler can process the archive at the given path.
    */
   virtual bool supportsArchive(const QString& archivePath) const = 0;
@@ -43,6 +38,14 @@ public:
   virtual bool extractArchive(const QString& archivePath, const QString& outputDirectory,
                               const ProgressCallback& progress = {},
                               QString* errorMessage             = nullptr) const = 0;
+
+  /**
+   * @brief File dialog name filters for archives this handler can process.
+   *
+   * NOTE: Kept after legacy virtuals to preserve ABI slot order for
+   * supportsArchive()/extractArchive() with pre-existing MO2 binaries.
+   */
+  virtual QStringList supportedArchiveNameFilters() const { return {}; }
 
   /**
    * @brief Check whether this handler can create the given archive.
