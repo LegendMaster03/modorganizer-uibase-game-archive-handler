@@ -101,6 +101,7 @@ set(formatters_header
 )
 
 add_library(uibase SHARED)
+set_target_properties(uibase PROPERTIES WINDOWS_EXPORT_ALL_SYMBOLS ON)
 mo2_configure_target(uibase NO_SOURCES WARNINGS ON EXTERNAL_WARNINGS ON)
 mo2_default_source_group()
 target_compile_features(uibase PUBLIC cxx_std_23)
