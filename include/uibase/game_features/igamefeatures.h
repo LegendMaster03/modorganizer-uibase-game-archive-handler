@@ -31,8 +31,8 @@ namespace details
   // use pointers in the tuple since are only forward-declaring the features here
   using BaseGameFeaturesP =
       std::tuple<BSAInvalidation*, DataArchives*, GamePlugins*, LocalSavegames*,
-           ModDataChecker*, ModDataContent*, SaveGameInfo*, ScriptExtender*,
-           UnmanagedMods*>;
+                 ModDataChecker*, ModDataContent*, SaveGameInfo*, ScriptExtender*,
+                 UnmanagedMods*>;
 
 }  // namespace details
 

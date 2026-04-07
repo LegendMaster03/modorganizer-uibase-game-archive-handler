@@ -35,9 +35,10 @@ public:
    *
    * @return true on success, false on failure or cancellation.
    */
-  virtual bool extractArchive(const QString& archivePath, const QString& outputDirectory,
+  virtual bool extractArchive(const QString& archivePath,
+                              const QString& outputDirectory,
                               const ProgressCallback& progress = {},
-                              QString* errorMessage             = nullptr) const = 0;
+                              QString* errorMessage            = nullptr) const = 0;
 
   /**
    * @brief File dialog name filters for archives this handler can process.
@@ -59,8 +60,7 @@ public:
    * cancelled.
    */
   virtual bool createArchive(const QString&, const QString&,
-                             const ProgressCallback& = {},
-                             QString*                = nullptr) const
+                             const ProgressCallback& = {}, QString* = nullptr) const
   {
     return false;
   }
