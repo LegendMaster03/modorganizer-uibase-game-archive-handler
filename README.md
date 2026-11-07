@@ -1,7 +1,13 @@
 # modorganizer-uibase
 
 [![Build status](https://github.com/ModOrganizer2/modorganizer-uibase/actions/workflows/build.yml/badge.svg?branch=dev/vcpkg)](https://github.com/ModOrganizer2/modorganizer-uibase/actions)
-[![Lint status]](https://github.com/ModOrganizer2/modorganizer-uibase/actions/workflows/linting.yml/badge.svg?branch=dev/vcpkg)](<https://github.com/ModOrganizer2/modorganizer-uibase/actions>)
+[![Lint status](https://github.com/ModOrganizer2/modorganizer-uibase/actions/workflows/linting.yml/badge.svg?branch=dev/vcpkg)](https://github.com/ModOrganizer2/modorganizer-uibase/actions)
+
+## GameArchiveHandler integration in this fork
+
+This repository forks [ModOrganizer2/modorganizer-uibase](https://github.com/ModOrganizer2/modorganizer-uibase) to add `MOBase::GameArchiveHandler`, an optional game-feature interface for delegating archive extraction and creation to the active game plugin. The underlying UIBase library remains based on the upstream project; this fork does not implement a universal archive codec.
+
+The contract and compatibility boundaries are described in [GameArchiveHandler integration](docs/game-archive-handler.md). Plugins consuming this feature must use a compatible UIBase build; the upstream build instructions below are retained.
 
 ## How to build?
 
